@@ -1,0 +1,42 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+android/app/*.keystore
+android/app/*.jks
+**/android/generated_*
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Web
+web/icons/Icon-*.png
+
+# 系统
+*.log
+.DS_Store
+Thumbs.db
+
+# 本地数据/密钥（绝不入库）
+*.db
+*.sqlite
+.env
