@@ -71,5 +71,14 @@ flutter build apk --release --split-per-abi
 
 代码 MIT。食谱数据部分来自 HowToCook（Unlicense）与 Wikimedia Commons（各自许可），详见数据文件内标注。
 
+## 🍎 iOS 版
+
+代码与安卓 100% 同一套（Flutter 单代码库），iOS 工程已配置就绪：
+
+- 显示名「轻食记」、中文区域、纯离线零权限、免加密合规申报
+- 云打包流水线 `codemagic.yaml`（免签名 IPA / TestFlight 正式签名 / Android 三条 workflow）
+- 详细步骤见 **[ios/IOS_BUILD_GUIDE.md](ios/IOS_BUILD_GUIDE.md)** —— 免费 Apple ID + Codemagic + Sideloadly 即可装到自己 iPhone
+
 ---
 Made with 💚 by alexbibihere · 纯离线，数据永不出设备
+
