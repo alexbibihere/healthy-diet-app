@@ -34,7 +34,11 @@
   2. 拖入 `litebite-unsigned.ipa`
   3. 输入你的 Apple ID（普通账号即可）→ Start
   4. iPhone 上 设置 → 通用 → VPN与设备管理 → 信任你的开发者证书
-  5. 打开 App 🎉（有效期 7 天，到期重复一次第 2~4 步）
+  5. 打开 App 🎉
+
+> **⚠️ 关于「7 天有效期」**：苹果规定免费 Apple ID 签名的 App 只有 7 天证书期。到期后 App 图标还在但**无法打开**；**你的所有数据（日记/体重记录）完好保留**，不会丢失。解决：数据线连电脑，Sideloadly 对同一 IPA 重签一次（1 分钟）即可复活。
+>
+> **💡 更省心**：改用 [AltStore](https://altstore.io)（电脑装 AltServer 常驻 + 手机同一 Wi-Fi），到期前会**自动刷新签名**，只需每周在手机上点开一次 AltStore App，基本无感。
 
 - **[AltStore](https://altstore.io)**：装一次后手机自行刷新签名，更省心，但初始配置稍麻烦
 
