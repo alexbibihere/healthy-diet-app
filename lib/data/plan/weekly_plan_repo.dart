@@ -6,6 +6,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'recipe_image_store.dart';
+
 /// 单道菜谱
 class Recipe {
   const Recipe({
@@ -22,6 +24,7 @@ class Recipe {
     required this.slots,
     this.imageUrl,
     this.isCustom = false,
+    this.imagePath,
   });
 
   final String id;
@@ -43,6 +46,9 @@ class Recipe {
   /// 用户自定义菜谱（可删除）
   final bool isCustom;
 
+  /// 自定义菜谱的本地图片文件名（位于 App 私有 recipe_images 目录）
+  final String? imagePath;
+
   /// 配图 asset 路径（打包离线图）
   String get imageAsset => 'assets/images/recipes/$id.jpg';
   bool get hasMacro => protein > 0 || fat > 0 || carb > 0;
@@ -51,6 +57,7 @@ class Recipe {
     String? id,
     bool? isCustom,
     String? tips,
+    String? imagePath,
   }) =>
       Recipe(
         id: id ?? this.id,
@@ -66,6 +73,7 @@ class Recipe {
         slots: slots,
         imageUrl: imageUrl,
         isCustom: isCustom ?? this.isCustom,
+        imagePath: imagePath ?? this.imagePath,
       );
 
   factory Recipe.fromJson(String id, Map<String, dynamic> j) => Recipe(
@@ -114,7 +122,8 @@ class WeeklyPlanRepo {
   // ---------- 自定义菜谱 ----------
 
   /// 添加自定义菜谱（持久化并合并进菜池）；返回生成的 id
-  Future<String> addCustomRecipe(Recipe r) async {
+  /// [imageFileName] 为可选的本地图片文件名（存于 App 私有 recipe_images 目录）
+  Future<String> addCustomRecipe(Recipe r, {String? imageFileName}) async {
     await _ensureLoaded();
     final id = 'custom_${DateTime.now().millisecondsSinceEpoch}';
     final custom = r.copyWith(id: id, isCustom: true);
@@ -134,17 +143,27 @@ class WeeklyPlanRepo {
       'steps': custom.steps,
       'tips': custom.tips,
       'slots': custom.slots,
+      if (imageFileName != null) 'imageFileName': imageFileName,
     }));
     await prefs.setStringList(_customKey, list);
-    _recipes![id] = custom;
+    _recipes![id] = imageFileName == null
+        ? custom
+        : custom.copyWith(imagePath: imageFileName);
     return id;
   }
 
-  /// 删除自定义菜谱（仅允许删自定义的）
+  /// 删除自定义菜谱（仅允许删自定义的），同时清理其图片文件
   Future<void> removeCustomRecipe(String id) async {
     await _ensureLoaded();
     final prefs = await SharedPreferences.getInstance();
     final list = prefs.getStringList(_customKey) ?? [];
+    // 清理图片文件
+    for (final s in list) {
+      final j = jsonDecode(s) as Map<String, dynamic>;
+      if (j['id'] == id && j['imageFileName'] != null) {
+        await RecipeImageStore.deleteImage(j['imageFileName'] as String);
+      }
+    }
     list.removeWhere((s) => (jsonDecode(s) as Map)['id'] == id);
     await prefs.setStringList(_customKey, list);
     _recipes?.remove(id);
@@ -232,7 +251,11 @@ class WeeklyPlanRepo {
       try {
         final j = jsonDecode(s) as Map<String, dynamic>;
         final id = j['id'] as String;
-        _recipes![id] = _parseExtra(id, j);
+        _recipes![id] = _parseExtra(id, j)
+            .copyWith(
+              isCustom: true,
+              imagePath: j['imageFileName'] as String?,
+            );
       } catch (_) {/* 单条损坏跳过 */}
     }
     _plans = [

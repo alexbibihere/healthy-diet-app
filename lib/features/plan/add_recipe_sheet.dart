@@ -1,9 +1,13 @@
 /// 功能层：添加自定义菜谱（表单弹层）
 library;
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_picker/image_picker.dart';
 
+import '../../data/plan/recipe_image_store.dart';
 import '../../data/plan/weekly_plan_repo.dart';
 import 'recipe_detail.dart';
 import 'weekly_plan_page.dart' show weeklyPlanProvider, weeklyPlanRepoProvider;
@@ -41,6 +45,7 @@ class _AddRecipeSheetState extends ConsumerState<_AddRecipeSheet> {
   final Set<int> _slots = {1};
   final List<({String n, String g})> _ingredients = [];
   final List<String> _steps = [];
+  XFile? _image;
 
   bool get _canSave =>
       _nameCtrl.text.trim().isNotEmpty &&
@@ -68,20 +73,30 @@ class _AddRecipeSheetState extends ConsumerState<_AddRecipeSheet> {
   }
 
   Future<void> _save() async {
+    // 先落图片文件（若有）
+    String? imageFileName;
+    if (_image != null) {
+      final seed = DateTime.now().millisecondsSinceEpoch.toString();
+      final saved = await RecipeImageStore.saveRecipeImage(_image!, seed);
+      imageFileName = saved.fileName;
+    }
     final repo = ref.read(weeklyPlanRepoProvider);
-    final id = await repo.addCustomRecipe(Recipe(
-      id: '',
-      name: _nameCtrl.text.trim(),
-      emoji: _emoji,
-      kcal: int.parse(_kcalCtrl.text),
-      protein: 0,
-      fat: 0,
-      carb: 0,
-      ingredients: List.of(_ingredients),
-      steps: List.of(_steps),
-      tips: _tipsCtrl.text.trim().isEmpty ? '我的自定义菜谱' : _tipsCtrl.text.trim(),
-      slots: _slots.isEmpty ? const [1] : _slots.toList(),
-    ));
+    final id = await repo.addCustomRecipe(
+      Recipe(
+        id: '',
+        name: _nameCtrl.text.trim(),
+        emoji: _emoji,
+        kcal: int.parse(_kcalCtrl.text),
+        protein: 0,
+        fat: 0,
+        carb: 0,
+        ingredients: List.of(_ingredients),
+        steps: List.of(_steps),
+        tips: _tipsCtrl.text.trim().isEmpty ? '我的自定义菜谱' : _tipsCtrl.text.trim(),
+        slots: _slots.isEmpty ? const [1] : _slots.toList(),
+      ),
+      imageFileName: imageFileName,
+    );
     // 刷新所有依赖菜谱池的页面
     ref.invalidate(weeklyPlanProvider);
     if (mounted) {
@@ -141,7 +156,52 @@ class _AddRecipeSheetState extends ConsumerState<_AddRecipeSheet> {
               ),
               onChanged: (_) => setState(() {}),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 16),
+
+            // 图片（可选）：拍照 或 相册
+            Text('📷 图片（可选）', style: Theme.of(context).textTheme.titleSmall),
+            const SizedBox(height: 6),
+            Row(
+              children: [
+                // 预览
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    width: 72,
+                    height: 72,
+                    color: scheme.surfaceContainerHighest,
+                    child: _image != null
+                        ? Image.file(File(_image!.path), fit: BoxFit.cover)
+                        : const Icon(Icons.image_outlined, size: 32),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                OutlinedButton.icon(
+                  onPressed: () async {
+                    final x = await RecipeImageStore.takePhoto();
+                    if (x != null) setState(() => _image = x);
+                  },
+                  icon: const Icon(Icons.photo_camera_outlined, size: 18),
+                  label: const Text('拍照'),
+                ),
+                const SizedBox(width: 8),
+                OutlinedButton.icon(
+                  onPressed: () async {
+                    final x = await RecipeImageStore.pickFromGallery();
+                    if (x != null) setState(() => _image = x);
+                  },
+                  icon: const Icon(Icons.photo_outlined, size: 18),
+                  label: const Text('相册'),
+                ),
+                if (_image != null)
+                  IconButton(
+                    tooltip: '移除图片',
+                    onPressed: () => setState(() => _image = null),
+                    icon: const Icon(Icons.close, size: 18),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 16),
 
             // emoji 选择
             Text('图标', style: Theme.of(context).textTheme.titleSmall),

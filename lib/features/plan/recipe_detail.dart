@@ -1,9 +1,12 @@
 /// 功能层：菜谱详情弹层 + 图片组件（周食谱 / 全部食谱共用）
 library;
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../data/plan/recipe_image_store.dart';
 import '../../data/plan/weekly_plan_repo.dart';
 import 'log_to_diary.dart';
 import 'weekly_plan_page.dart' show weeklyPlanRepoProvider;
@@ -38,7 +41,7 @@ class RecipeThumb extends StatelessWidget {
   }
 }
 
-/// 详情大图：本地 asset → 网络图 → emoji 渐变（三层回退）
+/// 详情大图：本地文件(自定义) → 打包asset → 网络图 → emoji 渐变
 class RecipeHeroImage extends StatelessWidget {
   const RecipeHeroImage({super.key, required this.recipe});
 
@@ -47,21 +50,34 @@ class RecipeHeroImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final hasLocal = recipe.isCustom && recipe.imagePath != null;
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
         aspectRatio: 16 / 9,
-        child: Image.asset(
-          recipe.imageAsset,
-          fit: BoxFit.cover,
-          errorBuilder: (_, _, _) => recipe.imageUrl != null
-              ? Image.network(
-                  recipe.imageUrl!,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, _, _) => _fallback(scheme),
-                )
-              : _fallback(scheme),
-        ),
+        child: hasLocal
+            ? FutureBuilder<String>(
+                future: RecipeImageStore.resolvePath(recipe.imagePath!),
+                builder: (ctx, snap) {
+                  if (snap.connectionState != ConnectionState.done) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  return Image.file(File(snap.data!),
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, _, _) => _fallback(scheme));
+                },
+              )
+            : Image.asset(
+                recipe.imageAsset,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => recipe.imageUrl != null
+                    ? Image.network(
+                        recipe.imageUrl!,
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, _, _) => _fallback(scheme),
+                      )
+                    : _fallback(scheme),
+              ),
       ),
     );
   }
