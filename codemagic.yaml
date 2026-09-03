@@ -61,13 +61,16 @@ workflows:
     name: iOS (signed, TestFlight)
     instance_type: mac_mini_m2
     max_build_duration: 60
-    integrating_with: app_store_connect
+    # 在 Codemagic 网页端配置（二选一）：
+    #   A. Team integrations → Developer Portal → 连接 App Store Connect API key，
+    #      然后把下方 integrations 里 <App Store Connect API key name> 换成你起的连接名
+    #   B. 环境变量组 appstore_credentials 存 APP_STORE_CONNECT_PRIVATE_KEY/KEY_IDENTIFIER/ISSUER_ID，
+    #      并改用 publishing.app_store_connect.api_key/key_id/issuer_id 写法（见官方文档）
+    integrations:
+      app_store_connect: <App Store Connect API key name>
     environment:
       flutter: stable
       xcode: latest
-      # 在 Codemagic 网页端配置：
-      #   Teams → Apple Developer 账号（App Store Connect API key）
-      #   或手动上传 .p12 证书 + .mobileprovision
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.alexbibi.litebite
@@ -88,6 +91,7 @@ workflows:
       - build/ios/ipa/*.ipa
     publishing:
       app_store_connect:
+        # 使用上方 integrations 里引用的 API key 认证上传
         auth: integration
         submit_to_testflight: true
         beta_groups:
