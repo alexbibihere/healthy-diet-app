@@ -21,6 +21,7 @@ class Recipe {
     required this.tips,
     required this.slots,
     this.imageUrl,
+    this.isCustom = false,
   });
 
   final String id;
@@ -39,9 +40,33 @@ class Recipe {
   /// 在线图片（howtocook 扩充菜谱用；优先本地 asset，没有才联网）
   final String? imageUrl;
 
+  /// 用户自定义菜谱（可删除）
+  final bool isCustom;
+
   /// 配图 asset 路径（打包离线图）
   String get imageAsset => 'assets/images/recipes/$id.jpg';
   bool get hasMacro => protein > 0 || fat > 0 || carb > 0;
+
+  Recipe copyWith({
+    String? id,
+    bool? isCustom,
+    String? tips,
+  }) =>
+      Recipe(
+        id: id ?? this.id,
+        name: name,
+        emoji: emoji,
+        kcal: kcal,
+        protein: protein,
+        fat: fat,
+        carb: carb,
+        ingredients: ingredients,
+        steps: steps,
+        tips: tips ?? this.tips,
+        slots: slots,
+        imageUrl: imageUrl,
+        isCustom: isCustom ?? this.isCustom,
+      );
 
   factory Recipe.fromJson(String id, Map<String, dynamic> j) => Recipe(
         id: id,
@@ -74,16 +99,66 @@ class DayPlan {
       meals.values.expand((l) => l).fold(0, (s, r) => s + r.kcal);
 }
 
-/// 周食谱仓库：预设 JSON + 用户换菜偏好 + 禁用（不吃）清单
+/// 周食谱仓库：预设 JSON + 用户换菜偏好 + 禁用（不吃）清单 + 自定义菜谱
 class WeeklyPlanRepo {
   static const _path = 'assets/seed/weekly_plan.json';
   static const _extraPath = 'assets/seed/howtocook_extra.json';
   static const _prefKey = 'weekly_plan_overrides_v1';
   static const _bannedKey = 'recipe_banned_v1';
+  static const _customKey = 'recipe_custom_v1';
 
   Map<String, Recipe>? _recipes;
   List<DayPlan>? _plans;
   Set<String> _banned = {};
+
+  // ---------- 自定义菜谱 ----------
+
+  /// 添加自定义菜谱（持久化并合并进菜池）；返回生成的 id
+  Future<String> addCustomRecipe(Recipe r) async {
+    await _ensureLoaded();
+    final id = 'custom_${DateTime.now().millisecondsSinceEpoch}';
+    final custom = r.copyWith(id: id, isCustom: true);
+    final prefs = await SharedPreferences.getInstance();
+    final list = prefs.getStringList(_customKey) ?? [];
+    list.add(jsonEncode({
+      'id': id,
+      'name': custom.name,
+      'emoji': custom.emoji,
+      'kcal': custom.kcal,
+      'protein': custom.protein,
+      'fat': custom.fat,
+      'carb': custom.carb,
+      'ingredients': [
+        for (final i in custom.ingredients) {'n': i.n, 'g': i.g},
+      ],
+      'steps': custom.steps,
+      'tips': custom.tips,
+      'slots': custom.slots,
+    }));
+    await prefs.setStringList(_customKey, list);
+    _recipes![id] = custom;
+    return id;
+  }
+
+  /// 删除自定义菜谱（仅允许删自定义的）
+  Future<void> removeCustomRecipe(String id) async {
+    await _ensureLoaded();
+    final prefs = await SharedPreferences.getInstance();
+    final list = prefs.getStringList(_customKey) ?? [];
+    list.removeWhere((s) => (jsonDecode(s) as Map)['id'] == id);
+    await prefs.setStringList(_customKey, list);
+    _recipes?.remove(id);
+    _banned.remove(id);
+    // 换菜 override 里也清掉引用
+    final raw = prefs.getString(_prefKey);
+    if (raw != null) {
+      final overrides = (jsonDecode(raw) as Map<String, dynamic>)
+        ..removeWhere((_, v) => (v as List).contains(id));
+      await prefs.setString(_prefKey, jsonEncode(overrides));
+    }
+  }
+
+  // ---------- 禁用（不吃） ----------
 
   /// 是否已禁用
   bool isBanned(String id) => _banned.contains(id);
@@ -150,9 +225,16 @@ class WeeklyPlanRepo {
     } catch (_) {
       // 扩充文件缺失不影响主流程
     }
-    // 恢复禁用清单
+    // 恢复禁用清单 + 自定义菜谱
     final prefs = await SharedPreferences.getInstance();
     _banned = (prefs.getStringList(_bannedKey) ?? const []).toSet();
+    for (final s in (prefs.getStringList(_customKey) ?? const [])) {
+      try {
+        final j = jsonDecode(s) as Map<String, dynamic>;
+        final id = j['id'] as String;
+        _recipes![id] = _parseExtra(id, j);
+      } catch (_) {/* 单条损坏跳过 */}
+    }
     _plans = [
       for (final p in (data['plans'] as List))
         DayPlan(

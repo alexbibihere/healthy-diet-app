@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../data/plan/weekly_plan_repo.dart';
+import 'add_recipe_sheet.dart';
 import 'log_to_diary.dart';
 import 'recipe_detail.dart';
 import 'weekly_plan_page.dart' show weeklyPlanRepoProvider;
@@ -33,7 +34,16 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
     final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('全部食谱')),
+      appBar: AppBar(
+        title: const Text('全部食谱'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            tooltip: '添加自定义菜谱',
+            onPressed: () => showAddRecipeSheet(context, ref),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           // 搜索框
