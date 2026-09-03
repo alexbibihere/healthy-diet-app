@@ -64,7 +64,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<!-- 纯离线 App：无需任何权限声明（无相机/定位/相册/网络服务） -->
+	<!-- 纯离线 App：仅图片选择需要相机/相册权限说明（自定义菜谱配图） -->
+	<key>NSCameraUsageDescription</key>
+	<string>用于给自定义菜谱拍摄配图</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>用于从相册选择图片作为菜谱配图</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>用于保存菜谱配图到相册</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 </dict>
