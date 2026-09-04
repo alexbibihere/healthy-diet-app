@@ -19,8 +19,9 @@ class AllRecipesPage extends ConsumerStatefulWidget {
 
 class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
   String _query = '';
-  int _filter = -1; // -1 全部 / 0早 1午 2晚 3加餐 / -2 已禁用
+  int _filter = -1; // -1 全部 / 0早 1午 2晚 3加餐 / -2 已禁用 / -3 减脂主推
   static const _bannedFilter = -2;
+  static const _greenFilter = -3;
 
   /// 拉全量菜谱（含 howtocook 扩充池）
   Future<List<Recipe>> _loadAll(WeeklyPlanRepo repo) async {
@@ -69,6 +70,7 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
               children: [
                 for (final f in const [
                   (-1, '全部'),
+                  (-3, '🟢 主推'),
                   (0, '早餐'),
                   (1, '午餐'),
                   (2, '晚餐'),
@@ -104,8 +106,9 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
                   final isBanned = bannedIds.contains(r.id);
                   final okFilter = switch (_filter) {
                     _bannedFilter => isBanned,
+                    _greenFilter => !isBanned && r.tier == 'green',
                     -1 => true,
-                    _ => r.slots.contains(_filter),
+                    _ => !isBanned && r.slots.contains(_filter),
                   };
                   final okQuery =
                       q.isEmpty || r.name.toLowerCase().contains(q);
@@ -125,6 +128,7 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
                 // 标题后跟当前筛选下的数量，如「全部食谱 · 134」
                 final countText = switch (_filter) {
                   _bannedFilter => '已禁用 · ${list.length}',
+                  _greenFilter => '减脂主推 · ${list.length}',
                   -1 => '全部 · ${list.length}',
                   _ => '${kSlotShort[_filter]} · ${list.length}',
                 };
@@ -259,9 +263,27 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
               color: isBanned ? scheme.onSurfaceVariant : null,
             ),
           ),
-          subtitle: Text(
-            isBanned ? '左滑恢复 · $slotText' : '$slotText · ${r.kcal} kcal',
-            style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
+          subtitle: Row(
+            children: [
+              // 减脂指数色点
+              Container(
+                width: 8, height: 8,
+                margin: const EdgeInsets.only(right: 4),
+                decoration: BoxDecoration(
+                  color: tierColor(r.tier),
+                  shape: BoxShape.circle,
+                ),
+              ),
+              Flexible(
+                child: Text(
+                  isBanned ? '左滑恢复 · $slotText' : '$slotText · ${r.kcal} kcal',
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: scheme.onSurfaceVariant),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
           ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
@@ -287,3 +309,10 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
 }
 
 const kSlotShort = {0: '早餐', 1: '午餐', 2: '晚餐', 3: '加餐'};
+
+/// 减脂指数 → 颜色（绿/黄/橙）
+Color tierColor(String tier) => switch (tier) {
+      'green' => const Color(0xFF2E7D32),
+      'orange' => const Color(0xFFEF6C00),
+      _ => const Color(0xFFF9A825),
+    };

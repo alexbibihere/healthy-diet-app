@@ -72,7 +72,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E5%B9%B2%E7%85%8E%E9%98%BF%E6%A0%B9%E5%BB%B7%E7%BA%A2%E8%99%BE/%E5%B9%B2%E7%85%8E%E9%98%BF%E6%A0%B9%E5%BB%B7%E7%BA%A2%E8%99%BE.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E5%B9%B2%E7%85%8E%E9%98%BF%E6%A0%B9%E5%BB%B7%E7%BA%A2%E8%99%BE/%E5%B9%B2%E7%85%8E%E9%98%BF%E6%A0%B9%E5%BB%B7%E7%BA%A2%E8%99%BE.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_2fcb0b963153",
@@ -147,7 +148,8 @@
    1,
    2
   ],
-  "imageUrl": "https://live.staticflickr.com/7570/15180056613_bcefdc5b51_b.jpg"
+  "imageUrl": "https://live.staticflickr.com/7570/15180056613_bcefdc5b51_b.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_526e9afbbfde",
@@ -211,7 +213,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_3917dc84c1ac",
@@ -286,7 +289,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E6%B8%85%E8%92%B8%E9%B2%88%E9%B1%BC/%E6%91%86%E7%9B%98.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E6%B8%85%E8%92%B8%E9%B2%88%E9%B1%BC/%E6%91%86%E7%9B%98.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_19af89994341",
@@ -357,7 +361,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "green"
  },
  {
   "id": "htc_75592f15e63a",
@@ -432,7 +437,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E8%91%B1%E6%B2%B9%E6%A1%82%E9%B1%BC/%E8%91%B1%E6%B2%B9%E6%A1%82%E9%B1%BC.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E8%91%B1%E6%B2%B9%E6%A1%82%E9%B1%BC/%E8%91%B1%E6%B2%B9%E6%A1%82%E9%B1%BC.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_ec32bccfc22e",
@@ -491,7 +497,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E8%91%B1%E7%83%A7%E6%B5%B7%E5%8F%82/%E8%91%B1%E7%83%A7%E6%B5%B7%E5%8F%82.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E8%91%B1%E7%83%A7%E6%B5%B7%E5%8F%82/%E8%91%B1%E7%83%A7%E6%B5%B7%E5%8F%82.jpeg",
+  "tier": "yellow"
  },
  {
   "id": "htc_d19c4f3faec9",
@@ -534,7 +541,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E8%92%9C%E8%93%89%E8%99%BE/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/aquatic/%E8%92%9C%E8%93%89%E8%99%BE/1.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_69237b3baf8d",
@@ -606,7 +614,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_f04849c907df",
@@ -649,7 +658,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_99d00fcdc285",
@@ -724,7 +734,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_bac18aa0217b",
@@ -797,7 +808,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_bf2546ff99cf",
@@ -842,7 +854,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_020bc77e4da8",
@@ -915,7 +928,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_82bfc69c0075",
@@ -985,7 +999,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_f939f1dad3bc",
@@ -1039,7 +1054,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_6370b72f37a3",
@@ -1085,7 +1101,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_d044fdc9f54e",
@@ -1137,7 +1154,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_f0ee619a1ec2",
@@ -1195,7 +1213,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_b5cf062e9ce0",
@@ -1241,7 +1260,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_0b0c3d457208",
@@ -1284,7 +1304,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_bff75c373881",
@@ -1353,7 +1374,8 @@
    0,
    3
   ],
-  "imageUrl": "https://live.staticflickr.com/8375/8587132602_6559884551_b.jpg"
+  "imageUrl": "https://live.staticflickr.com/8375/8587132602_6559884551_b.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_f9908f3e8f41",
@@ -1397,7 +1419,8 @@
    0,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_c0a15c42f41e",
@@ -1442,7 +1465,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_239410cfc2c6",
@@ -1510,7 +1534,8 @@
   "slots": [
    0
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_7807ba14b447",
@@ -1578,7 +1603,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%87%89%E6%8B%8C%E9%B8%A1%E4%B8%9D/%E5%87%89%E6%8B%8C%E9%B8%A1%E4%B8%9D.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%87%89%E6%8B%8C%E9%B8%A1%E4%B8%9D/%E5%87%89%E6%8B%8C%E9%B8%A1%E4%B8%9D.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_2fbe274de68f",
@@ -1653,7 +1679,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E6%B0%B4.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%8D%A4%E8%8F%9C/%E5%8D%A4%E6%B0%B4.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_4569b89ce867",
@@ -1726,7 +1753,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%95%A4%E9%85%92%E9%B8%AD/%E5%95%A4%E9%85%92%E9%B8%AD.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%95%A4%E9%85%92%E9%B8%AD/%E5%95%A4%E9%85%92%E9%B8%AD.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_3d56bddd49e1",
@@ -1800,7 +1828,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_5217365b8ac8",
@@ -1875,7 +1904,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%B9%BF%E5%BC%8F%E8%90%9D%E5%8D%9C%E7%89%9B%E8%85%A9/%E5%B9%BF%E5%BC%8F%E8%90%9D%E5%8D%9C%E7%89%9B%E8%85%A9.webp"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E5%B9%BF%E5%BC%8F%E8%90%9D%E5%8D%9C%E7%89%9B%E8%85%A9/%E5%B9%BF%E5%BC%8F%E8%90%9D%E5%8D%9C%E7%89%9B%E8%85%A9.webp",
+  "tier": "orange"
  },
  {
   "id": "htc_0639311b42b4",
@@ -1948,7 +1978,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_89f066cbf64e",
@@ -2001,7 +2032,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E6%A1%82%E6%9E%97%E5%8D%81%E5%85%AB%E9%85%BF/arch.png"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E6%A1%82%E6%9E%97%E5%8D%81%E5%85%AB%E9%85%BF/arch.png",
+  "tier": "orange"
  },
  {
   "id": "htc_fe9192f18b57",
@@ -2076,7 +2108,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E6%B0%B4%E7%85%AE%E7%89%9B%E8%82%89/sznr1.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E6%B0%B4%E7%85%AE%E7%89%9B%E8%82%89/sznr1.jpg",
+  "tier": "orange"
  },
  {
   "id": "htc_9d7689398b11",
@@ -2151,7 +2184,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_8cdd6ea6b07d",
@@ -2222,7 +2256,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E6%B8%85%E8%92%B8%E9%B3%9C%E9%B1%BC/%E6%B8%85%E8%92%B8%E9%B3%9C%E9%B1%BC%E6%88%90%E5%93%81%E5%9B%BE.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E6%B8%85%E8%92%B8%E9%B3%9C%E9%B1%BC/%E6%B8%85%E8%92%B8%E9%B3%9C%E9%B1%BC%E6%88%90%E5%93%81%E5%9B%BE.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_245bc631b0bc",
@@ -2291,7 +2326,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_9b6b9120a084",
@@ -2354,7 +2390,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_b2dc8cd08425",
@@ -2424,7 +2461,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E8%B1%86%E8%B1%89%E9%B2%AE%E9%B1%BC%E6%B2%B9%E9%BA%A6%E8%8F%9C/%E8%B1%86%E8%B1%89%E9%B2%AE%E9%B1%BC%E6%B2%B9%E9%BA%A6%E8%8F%9C%E6%88%90%E5%93%81.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E8%B1%86%E8%B1%89%E9%B2%AE%E9%B1%BC%E6%B2%B9%E9%BA%A6%E8%8F%9C/%E8%B1%86%E8%B1%89%E9%B2%AE%E9%B1%BC%E6%B2%B9%E9%BA%A6%E8%8F%9C%E6%88%90%E5%93%81.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_1df3387e3d2a",
@@ -2494,7 +2532,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E8%B1%89%E6%B1%81%E8%92%B8%E7%99%BD%E9%B1%94/%E8%B1%89%E6%B1%81%E8%92%B8%E7%99%BD%E9%B1%94.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E8%B1%89%E6%B1%81%E8%92%B8%E7%99%BD%E9%B1%94/%E8%B1%89%E6%B1%81%E8%92%B8%E7%99%BD%E9%B1%94.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_43d08ec8ddc3",
@@ -2569,7 +2608,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_4c0c6b77cfa1",
@@ -2644,7 +2684,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_2d3cd0efc70f",
@@ -2719,7 +2760,8 @@
    1,
    2
   ],
-  "imageUrl": "https://live.staticflickr.com/1446/25548906340_ab522ee15a_b.jpg"
+  "imageUrl": "https://live.staticflickr.com/1446/25548906340_ab522ee15a_b.jpg",
+  "tier": "orange"
  },
  {
   "id": "htc_1f2031dc3b52",
@@ -2794,7 +2836,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90/1.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_ed2dd86acf87",
@@ -2869,7 +2912,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E9%BB%91%E6%A4%92%E7%89%9B%E6%9F%B3/%E9%BB%91%E6%A4%92%E7%89%9B%E6%9F%B3.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/meat_dish/%E9%BB%91%E6%A4%92%E7%89%9B%E6%9F%B3/%E9%BB%91%E6%A4%92%E7%89%9B%E6%9F%B3.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_68fc1cccb487",
@@ -2925,7 +2969,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E5%8B%BE%E8%8A%A1%E9%A6%99%E8%8F%87%E6%B1%A4/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E5%8B%BE%E8%8A%A1%E9%A6%99%E8%8F%87%E6%B1%A4/1.jpeg",
+  "tier": "green"
  },
  {
   "id": "htc_46b60d43e324",
@@ -2998,7 +3043,8 @@
   "slots": [
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_8d34aa4eeede",
@@ -3037,7 +3083,8 @@
   "slots": [
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_d01e40be670f",
@@ -3108,7 +3155,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E6%98%82%E5%88%BA%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A4/%E6%98%82%E5%88%BA%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A401.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E6%98%82%E5%88%BA%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A4/%E6%98%82%E5%88%BA%E9%B1%BC%E8%B1%86%E8%85%90%E6%B1%A401.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_270f008e3a2c",
@@ -3161,7 +3209,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E6%9C%B1%E9%9B%80%E6%B1%A4/%E6%9C%B1%E9%9B%80%E6%B1%A4.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E6%9C%B1%E9%9B%80%E6%B1%A4/%E6%9C%B1%E9%9B%80%E6%B1%A4.jpg",
+  "tier": "green"
  },
  {
   "id": "htc_e6200f7630f2",
@@ -3235,7 +3284,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_4264bca8a97a",
@@ -3295,7 +3345,8 @@
   "slots": [
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_7768f76aa9be",
@@ -3359,7 +3410,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "green"
  },
  {
   "id": "htc_d1901dda590e",
@@ -3405,7 +3457,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E8%8F%8C%E8%8F%87%E7%82%96%E4%B9%B3%E9%B8%BD/%E8%8F%8C%E8%8F%87%E7%82%96%E4%B9%B3%E9%B8%BD.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E8%8F%8C%E8%8F%87%E7%82%96%E4%B9%B3%E9%B8%BD/%E8%8F%8C%E8%8F%87%E7%82%96%E4%B9%B3%E9%B8%BD.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_3c0869ed018e",
@@ -3468,7 +3521,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_50c919b54815",
@@ -3515,7 +3569,8 @@
   "slots": [
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "green"
  },
  {
   "id": "htc_e7de6812aff0",
@@ -3572,7 +3627,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E9%93%B6%E8%80%B3%E8%8E%B2%E5%AD%90%E7%B2%A5/%E9%93%B6%E8%80%B3%E8%8E%B2%E5%AD%90%E7%B2%A5.png"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E9%93%B6%E8%80%B3%E8%8E%B2%E5%AD%90%E7%B2%A5/%E9%93%B6%E8%80%B3%E8%8E%B2%E5%AD%90%E7%B2%A5.png",
+  "tier": "orange"
  },
  {
   "id": "htc_74b19662cd0c",
@@ -3633,7 +3689,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_c21cc2749a23",
@@ -3694,7 +3751,8 @@
   "slots": [
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/soup/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4/%E9%99%88%E7%9A%AE%E6%8E%92%E9%AA%A8%E6%B1%A4.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_ffbc1aeb2df0",
@@ -3766,7 +3824,8 @@
   "slots": [
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_a83b23bafe48",
@@ -3813,7 +3872,8 @@
   "slots": [
    1
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%82%92%E6%84%8F%E5%A4%A7%E5%88%A9%E9%9D%A2/a.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%82%92%E6%84%8F%E5%A4%A7%E5%88%A9%E9%9D%A2/a.jpg",
+  "tier": "orange"
  },
  {
   "id": "htc_8246ee1c7fbd",
@@ -3867,7 +3927,8 @@
   "slots": [
    1
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%83%A7%E9%A5%BC/%E8%8A%9D%E9%BA%BB%E7%83%A7%E9%A5%BC.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%83%A7%E9%A5%BC/%E8%8A%9D%E9%BA%BB%E7%83%A7%E9%A5%BC.jpg",
+  "tier": "orange"
  },
  {
   "id": "htc_79b42fd4e0e4",
@@ -3932,7 +3993,8 @@
   "slots": [
    1
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_779cffd00175",
@@ -3968,7 +4030,8 @@
   "slots": [
    1
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%B1%B3%E9%A5%AD/rice_regularPot.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%B1%B3%E9%A5%AD/rice_regularPot.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_f0672dc429f3",
@@ -4030,7 +4093,8 @@
   "slots": [
    1
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%B1%B3%E9%A5%AD/rice_regularPot.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E7%B1%B3%E9%A5%AD/rice_regularPot.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_7f682a959361",
@@ -4092,7 +4156,8 @@
   "slots": [
    1
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_84361b19c3c0",
@@ -4145,7 +4210,8 @@
   "slots": [
    1
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E9%85%B1%E6%8B%8C%E8%8D%9E%E9%BA%A6%E9%9D%A2/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E9%85%B1%E6%8B%8C%E8%8D%9E%E9%BA%A6%E9%9D%A2/1.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_d25bc2df7b02",
@@ -4218,7 +4284,8 @@
   "slots": [
    1
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_4eef8da1a43a",
@@ -4254,7 +4321,8 @@
   "slots": [
    1
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E9%B2%A3%E9%B1%BC%E6%B5%B7%E8%8B%94%E7%8E%89%E7%B1%B3%E9%A5%AD/%E7%B1%B3%E9%A5%AD.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/staple/%E9%B2%A3%E9%B1%BC%E6%B5%B7%E8%8B%94%E7%8E%89%E7%B1%B3%E9%A5%AD/%E7%B1%B3%E9%A5%AD.jpg",
+  "tier": "orange"
  },
  {
   "id": "htc_a592736f816b",
@@ -4311,7 +4379,8 @@
   "slots": [
    1
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_f93e96308a01",
@@ -4382,7 +4451,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E4%B8%8A%E6%B1%A4%E5%A8%83%E5%A8%83%E8%8F%9C/%E4%B8%8A%E6%B1%A4%E5%A8%83%E5%A8%83%E8%8F%9C.png"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E4%B8%8A%E6%B1%A4%E5%A8%83%E5%A8%83%E8%8F%9C/%E4%B8%8A%E6%B1%A4%E5%A8%83%E5%A8%83%E8%8F%9C.png",
+  "tier": "green"
  },
  {
   "id": "htc_657d98c341fe",
@@ -4455,7 +4525,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E4%B9%BE%E9%9A%86%E7%99%BD%E8%8F%9C/%E4%B9%BE%E9%9A%86%E7%99%BD%E8%8F%9C.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E4%B9%BE%E9%9A%86%E7%99%BD%E8%8F%9C/%E4%B9%BE%E9%9A%86%E7%99%BD%E8%8F%9C.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_70560f17ca59",
@@ -4529,7 +4600,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%87%89%E6%8B%8C%E6%9C%A8%E8%80%B3/1.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%87%89%E6%8B%8C%E6%9C%A8%E8%80%B3/1.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_60353451628d",
@@ -4601,7 +4673,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_3f38c9245075",
@@ -4670,7 +4743,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%87%89%E6%8B%8C%E8%8E%B4%E7%AC%8B/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%87%89%E6%8B%8C%E8%8E%B4%E7%AC%8B/1.jpeg",
+  "tier": "yellow"
  },
  {
   "id": "htc_01fa71dc4fae",
@@ -4745,7 +4819,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_81b78202d06d",
@@ -4817,7 +4892,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_3aac123e8667",
@@ -4887,7 +4963,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_ef841aeca3a4",
@@ -4962,7 +5039,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%9C%B0%E4%B8%89%E9%B2%9C/%E5%9C%B0%E4%B8%89%E9%B2%9C.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%9C%B0%E4%B8%89%E9%B2%9C/%E5%9C%B0%E4%B8%89%E9%B2%9C.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_cacb35d45b09",
@@ -5037,7 +5115,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%B0%8F%E7%82%92%E8%97%95%E4%B8%81/%E5%B0%8F%E7%82%92%E8%97%95%E4%B8%81.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E5%B0%8F%E7%82%92%E8%97%95%E4%B8%81/%E5%B0%8F%E7%82%92%E8%97%95%E4%B8%81.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_34c0453b6094",
@@ -5089,7 +5168,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_4740875ca905",
@@ -5162,7 +5242,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_04976b31a474",
@@ -5221,7 +5302,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_8dea6d3b2085",
@@ -5267,7 +5349,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_3acafdb8f45a",
@@ -5315,7 +5398,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%82%92%E6%BB%91%E8%9B%8B/%E7%82%92%E6%BB%91%E8%9B%8B.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%82%92%E6%BB%91%E8%9B%8B/%E7%82%92%E6%BB%91%E8%9B%8B.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_548db4ea9458",
@@ -5365,7 +5449,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_232a003d6dd3",
@@ -5440,7 +5525,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%83%A4%E8%8C%84%E5%AD%90/%E7%83%A4%E8%8C%84%E5%AD%90.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%83%A4%E8%8C%84%E5%AD%90/%E7%83%A4%E8%8C%84%E5%AD%90.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_cf6b519cd7d8",
@@ -5506,7 +5592,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%99%BD%E7%81%BC%E8%8F%9C%E5%BF%83/%E7%99%BD%E7%81%BC%E8%8F%9C%E5%BF%83.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%99%BD%E7%81%BC%E8%8F%9C%E5%BF%83/%E7%99%BD%E7%81%BC%E8%8F%9C%E5%BF%83.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_207574a3a1de",
@@ -5546,7 +5633,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%B3%96%E6%8B%8C%E8%A5%BF%E7%BA%A2%E6%9F%BF/%E7%81%AB%E5%B1%B1%E9%A3%98%E9%9B%AA.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E7%B3%96%E6%8B%8C%E8%A5%BF%E7%BA%A2%E6%9F%BF/%E7%81%AB%E5%B1%B1%E9%A3%98%E9%9B%AA.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_7b555da761f9",
@@ -5613,7 +5701,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_dd0a8c823556",
@@ -5688,7 +5777,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%8A%B9%E8%8F%9C%E6%8B%8C%E8%8C%B6%E6%A0%91%E8%8F%87/%E8%8A%B9%E8%8F%9C%E6%8B%8C%E8%8C%B6%E6%A0%91%E8%8F%87.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%8A%B9%E8%8F%9C%E6%8B%8C%E8%8C%B6%E6%A0%91%E8%8F%87/%E8%8A%B9%E8%8F%9C%E6%8B%8C%E8%8C%B6%E6%A0%91%E8%8F%87.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_abbe5cdc7dac",
@@ -5738,7 +5828,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%8E%B4%E7%AC%8B%E5%8F%B6%E7%85%8E%E9%A5%BC/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%8E%B4%E7%AC%8B%E5%8F%B6%E7%85%8E%E9%A5%BC/1.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_8df0e82b643b",
@@ -5781,7 +5872,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%8F%A0%E8%8F%9C%E7%82%92%E9%B8%A1%E8%9B%8B/%E8%8F%A0%E8%8F%9C%E7%82%92%E9%B8%A1%E8%9B%8B.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%8F%A0%E8%8F%9C%E7%82%92%E9%B8%A1%E8%9B%8B/%E8%8F%A0%E8%8F%9C%E7%82%92%E9%B8%A1%E8%9B%8B.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_eff703aaff9e",
@@ -5848,7 +5940,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_da746a0d0952",
@@ -5906,7 +5999,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%92%9C%E8%93%89%E7%82%92%E8%8A%B9%E8%8F%9C/%E8%92%9C%E8%93%89%E7%82%92%E8%8A%B9%E8%8F%9C.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%92%9C%E8%93%89%E7%82%92%E8%8A%B9%E8%8F%9C/%E8%92%9C%E8%93%89%E7%82%92%E8%8A%B9%E8%8F%9C.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_9bd71031176d",
@@ -5979,7 +6073,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%92%9C%E8%93%89%E7%A9%BA%E5%BF%83%E8%8F%9C/1.JPG"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%92%9C%E8%93%89%E7%A9%BA%E5%BF%83%E8%8F%9C/1.JPG",
+  "tier": "orange"
  },
  {
   "id": "htc_7fc1a7b0a247",
@@ -6038,7 +6133,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_289a89162c03",
@@ -6113,7 +6209,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_25eea1b587f8",
@@ -6176,7 +6273,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%99%8E%E7%9A%AE%E9%9D%92%E6%A4%92/%E8%99%8E%E7%9A%AE%E9%9D%92%E6%A4%92.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%99%8E%E7%9A%AE%E9%9D%92%E6%A4%92/%E8%99%8E%E7%9A%AE%E9%9D%92%E6%A4%92.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_35395867fdec",
@@ -6251,7 +6349,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%9A%9D%E6%B2%B9%E4%B8%89%E9%B2%9C%E8%8F%87/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%9A%9D%E6%B2%B9%E4%B8%89%E9%B2%9C%E8%8F%87/1.jpeg",
+  "tier": "yellow"
  },
  {
   "id": "htc_9a2a094a2800",
@@ -6322,7 +6421,8 @@
    1,
    2
   ],
-  "imageUrl": "https://live.staticflickr.com/1685/25163223915_4717d872e9_b.jpg"
+  "imageUrl": "https://live.staticflickr.com/1685/25163223915_4717d872e9_b.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_6768958b6ab1",
@@ -6398,7 +6498,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_539a654696b0",
@@ -6463,7 +6564,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%A5%BF%E7%BA%A2%E6%9F%BF%E8%B1%86%E8%85%90%E6%B1%A4%E7%BE%B9/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%A5%BF%E7%BA%A2%E6%9F%BF%E8%B1%86%E8%85%90%E6%B1%A4%E7%BE%B9/1.jpeg",
+  "tier": "green"
  },
  {
   "id": "htc_347f1aaede01",
@@ -6515,7 +6617,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%A5%BF%E8%91%AB%E8%8A%A6%E7%82%92%E9%B8%A1%E8%9B%8B/%E8%A5%BF%E8%91%AB%E8%8A%A6%E7%82%92%E9%B8%A1%E8%9B%8B.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%A5%BF%E8%91%AB%E8%8A%A6%E7%82%92%E9%B8%A1%E8%9B%8B/%E8%A5%BF%E8%91%AB%E8%8A%A6%E7%82%92%E9%B8%A1%E8%9B%8B.jpeg",
+  "tier": "yellow"
  },
  {
   "id": "htc_5ba06c920e44",
@@ -6552,7 +6655,8 @@
    1,
    2
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%AF%9D%E6%A2%85%E7%85%AE%E6%AF%9B%E8%B1%86/1.jpeg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E8%AF%9D%E6%A2%85%E7%85%AE%E6%AF%9B%E8%B1%86/1.jpeg",
+  "tier": "orange"
  },
  {
   "id": "htc_fc29071a6fc6",
@@ -6622,7 +6726,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_93c101df34af",
@@ -6697,7 +6802,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_3733a9a2b513",
@@ -6772,7 +6878,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_b348ee61557b",
@@ -6847,7 +6954,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "orange"
  },
  {
   "id": "htc_e3f5e3817c55",
@@ -6915,7 +7023,8 @@
    2,
    3
   ],
-  "imageUrl": "https://live.staticflickr.com/59/187870181_b5371ddd9b.jpg"
+  "imageUrl": "https://live.staticflickr.com/59/187870181_b5371ddd9b.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_cf6f798c4460",
@@ -6974,7 +7083,8 @@
    1,
    2
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "htc_bbc05a0469c0",
@@ -7034,7 +7144,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E9%B8%A1%E8%9B%8B%E7%BE%B9/%E5%BE%AE%E6%B3%A2%E7%82%89%E9%B8%A1%E8%9B%8B%E7%BE%B9.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E9%B8%A1%E8%9B%8B%E7%BE%B9/%E5%BE%AE%E6%B3%A2%E7%82%89%E9%B8%A1%E8%9B%8B%E7%BE%B9.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_f5af29c4fa21",
@@ -7098,7 +7209,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E9%B8%A1%E8%9B%8B%E7%BE%B9/%E5%BE%AE%E6%B3%A2%E7%82%89%E9%B8%A1%E8%9B%8B%E7%BE%B9.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E9%B8%A1%E8%9B%8B%E7%BE%B9/%E5%BE%AE%E6%B3%A2%E7%82%89%E9%B8%A1%E8%9B%8B%E7%BE%B9.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_98d8614aaf95",
@@ -7174,7 +7286,8 @@
    2,
    3
   ],
-  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E9%B8%A1%E8%9B%8B%E7%BE%B9/%E5%BE%AE%E6%B3%A2%E7%82%89%E9%B8%A1%E8%9B%8B%E7%BE%B9.jpg"
+  "imageUrl": "https://cdn.jsdelivr.net/gh/Anduin2017/HowToCook@master/dishes/vegetable_dish/%E9%B8%A1%E8%9B%8B%E7%BE%B9/%E5%BE%AE%E6%B3%A2%E7%82%89%E9%B8%A1%E8%9B%8B%E7%BE%B9.jpg",
+  "tier": "yellow"
  },
  {
   "id": "htc_87306e5fc358",
@@ -7232,7 +7345,8 @@
    2,
    3
   ],
-  "imageUrl": null
+  "imageUrl": null,
+  "tier": "yellow"
  },
  {
   "id": "my_garlic_chicken_veggie",
@@ -7276,7 +7390,8 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_beef_seafood_mushroom",
@@ -7316,7 +7431,8 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_braised_chicken_leg",
@@ -7356,7 +7472,8 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_leg_mushroom_braise",
@@ -7392,7 +7509,8 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_hot_sour_wood_ear",
@@ -7427,7 +7545,8 @@
    1,
    3
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "yellow"
  },
  {
   "id": "my_egg_tomato_less_oil",
@@ -7463,7 +7582,8 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_egg_mushroom_soup",
@@ -7501,7 +7621,8 @@
    2,
    3
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_boiled_egg_breakfast",
@@ -7530,7 +7651,8 @@
   "slots": [
    0
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "green"
  },
  {
   "id": "my_roasted_sweet_potato",
@@ -7557,7 +7679,8 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "yellow"
  },
  {
   "id": "my_sweet_potato_chicken_bowl",
@@ -7596,6 +7719,7 @@
    1,
    2
   ],
-  "source": "user-home"
+  "source": "user-home",
+  "tier": "yellow"
  }
 ]

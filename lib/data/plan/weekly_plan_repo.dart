@@ -25,6 +25,7 @@ class Recipe {
     this.imageUrl,
     this.isCustom = false,
     this.imagePath,
+    this.tier = 'yellow',
   });
 
   final String id;
@@ -49,6 +50,17 @@ class Recipe {
   /// 自定义菜谱的本地图片文件名（位于 App 私有 recipe_images 目录）
   final String? imagePath;
 
+  /// 减脂指数：green 主推 / yellow 适量 / orange 偶尔
+  final String tier;
+
+  static const tierLabels = {
+    'green': '减脂主推',
+    'yellow': '适量吃',
+    'orange': '偶尔解馋',
+  };
+
+  String get tierLabel => tierLabels[tier] ?? '适量吃';
+
   /// 配图 asset 路径（打包离线图）
   String get imageAsset => 'assets/images/recipes/$id.jpg';
   bool get hasMacro => protein > 0 || fat > 0 || carb > 0;
@@ -58,6 +70,7 @@ class Recipe {
     bool? isCustom,
     String? tips,
     String? imagePath,
+    String? tier,
   }) =>
       Recipe(
         id: id ?? this.id,
@@ -74,6 +87,7 @@ class Recipe {
         imageUrl: imageUrl,
         isCustom: isCustom ?? this.isCustom,
         imagePath: imagePath ?? this.imagePath,
+        tier: tier ?? this.tier,
       );
 
   factory Recipe.fromJson(String id, Map<String, dynamic> j) => Recipe(
@@ -91,6 +105,7 @@ class Recipe {
         steps: [for (final s in (j['steps'] as List)) s as String],
         tips: j['tips'] as String,
         slots: [for (final s in (j['slots'] as List)) (s as num).toInt()],
+        tier: (j['tier'] as String?) ?? 'yellow',
       );
 }
 
@@ -222,6 +237,7 @@ class WeeklyPlanRepo {
         tips: j['tips'] as String,
         slots: [for (final s in (j['slots'] as List)) (s as num).toInt()],
         imageUrl: j['imageUrl'] as String?,
+        tier: (j['tier'] as String?) ?? 'yellow',
       );
 
   Future<void> _ensureLoaded() async {

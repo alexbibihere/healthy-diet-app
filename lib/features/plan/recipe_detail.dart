@@ -9,6 +9,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/plan/recipe_image_store.dart';
 import '../../data/plan/weekly_plan_repo.dart';
 import 'log_to_diary.dart';
+import 'all_recipes_page.dart' show tierColor;
 import 'weekly_plan_page.dart' show weeklyPlanRepoProvider;
 
 /// 列表缩略图：本地 asset 优先，缺失回退 emoji 色块
@@ -144,6 +145,36 @@ Future<void> openRecipeSheet(BuildContext context, Recipe r) {
                     child: Text('已加入「不吃」清单，食谱中不再出现',
                         style:
                             TextStyle(color: scheme.error, fontSize: 12)),
+                  ),
+                ),
+              )
+            else
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Center(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: tierColor(r.tier).withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 8, height: 8,
+                          margin: const EdgeInsets.only(right: 5),
+                          decoration: BoxDecoration(
+                            color: tierColor(r.tier),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        Text(r.tierLabel,
+                            style: TextStyle(
+                                color: tierColor(r.tier), fontSize: 12)),
+                      ],
+                    ),
                   ),
                 ),
               ),

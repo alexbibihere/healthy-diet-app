@@ -34,7 +34,8 @@
       "tips": "选配料表只有「燕麦」的纯燕麦片，避免即食甜麦片。牛奶可换无糖豆浆。",
       "slots": [
         0
-      ]
+      ],
+      "tier": "yellow"
     },
     "whole_toast_egg": {
       "name": "全麦吐司 + 煎蛋 + 圣女果",
@@ -70,7 +71,8 @@
       "tips": "认准配料表第一位是「全麦粉」且含量>50%的吐司。",
       "slots": [
         0
-      ]
+      ],
+      "tier": "yellow"
     },
     "soymilk_baozi": {
       "name": "无糖豆浆 + 玉米 + 茶叶蛋",
@@ -101,7 +103,8 @@
       "tips": "便利店买豆浆看营养成分表，每100ml糖<1g才算无糖。",
       "slots": [
         0
-      ]
+      ],
+      "tier": "yellow"
     },
     "yogurt_fruit": {
       "name": "无糖酸奶碗",
@@ -137,7 +140,8 @@
       "slots": [
         0,
         3
-      ]
+      ],
+      "tier": "green"
     },
     "chicken_rice_broc": {
       "name": "鸡胸肉盖饭 + 白灼西兰花",
@@ -173,7 +177,8 @@
       "tips": "鸡胸剖薄+腌制是嫩的关键；煎过头会柴。可一次煎3天量冷藏。",
       "slots": [
         1
-      ]
+      ],
+      "tier": "yellow"
     },
     "beef_noodle": {
       "name": "番茄牛腩面",
@@ -209,7 +214,8 @@
       "tips": "周末一次炖一锅，分装冷冻，工作日加热浇面超省时。",
       "slots": [
         1
-      ]
+      ],
+      "tier": "yellow"
     },
     "salmon_rice": {
       "name": "香煎三文鱼 + 藜麦饭",
@@ -246,7 +252,8 @@
       "slots": [
         1,
         2
-      ]
+      ],
+      "tier": "yellow"
     },
     "shrimp_pasta": {
       "name": "虾仁时蔬意面",
@@ -282,7 +289,8 @@
       "tips": "面汤是天然酱汁，能裹住面条不用额外加酱。",
       "slots": [
         1
-      ]
+      ],
+      "tier": "yellow"
     },
     "steamed_fish": {
       "name": "清蒸鲈鱼 + 蒜蓉油麦菜 + 米饭",
@@ -318,7 +326,8 @@
       "tips": "蒸鱼时间按鱼大小：1斤8分钟，每多2两加1分钟，蒸久就老。",
       "slots": [
         2
-      ]
+      ],
+      "tier": "yellow"
     },
     "chicken_salad": {
       "name": "低卡鸡丝荞麦冷面",
@@ -355,7 +364,8 @@
       "slots": [
         1,
         2
-      ]
+      ],
+      "tier": "yellow"
     },
     "egg_tofu_stew": {
       "name": "番茄金针菇豆腐汤 + 紫薯",
@@ -395,7 +405,8 @@
       "tips": "晚餐低碳水日的好选择：有饱腹感但总热量低。",
       "slots": [
         2
-      ]
+      ],
+      "tier": "yellow"
     },
     "curry_chicken": {
       "name": "咖喱鸡肉杂粮饭",
@@ -431,7 +442,8 @@
       "tips": "咖喱块只用1/3块就够了，钠和热量都省下来。",
       "slots": [
         1
-      ]
+      ],
+      "tier": "yellow"
     },
     "apple_nuts": {
       "name": "苹果 + 原味坚果",
@@ -457,7 +469,8 @@
       "tips": "下午3-4点加餐，防止晚餐前饿到暴食。",
       "slots": [
         3
-      ]
+      ],
+      "tier": "yellow"
     },
     "yogurt_nut": {
       "name": "无糖酸奶 + 黄瓜条",
@@ -483,7 +496,8 @@
       "tips": "晚上嘴馋时的救星，热量低还有饱腹感。",
       "slots": [
         3
-      ]
+      ],
+      "tier": "yellow"
     },
     "boiled_egg_tomato": {
       "name": "水煮蛋 + 小番茄",
@@ -509,7 +523,8 @@
       "tips": "健身日练后加餐可再加一杯牛奶补蛋白。",
       "slots": [
         3
-      ]
+      ],
+      "tier": "yellow"
     },
     "tofu_veg_bowl": {
       "name": "虾仁豆腐煲 + 杂粮饭",
@@ -550,7 +565,8 @@
       "slots": [
         1,
         2
-      ]
+      ],
+      "tier": "yellow"
     },
     "congee_egg_pickles": {
       "name": "杂粮粥 + 水煮蛋 + 拍黄瓜",
@@ -586,7 +602,8 @@
       "tips": "晚上把杂粮泡上放冰箱，早上直接煮省一半时间。",
       "slots": [
         0
-      ]
+      ],
+      "tier": "yellow"
     },
     "chicken_wrap": {
       "name": "鸡胸肉全麦卷饼",
@@ -626,7 +643,8 @@
       "tips": "酸奶代替沙拉酱，热量直接砍半。可周末备菜，工作日3分钟组装。",
       "slots": [
         1
-      ]
+      ],
+      "tier": "yellow"
     },
     "sweet_pot_chicken": {
       "name": "烤红薯 + 黑椒鸡胸 + 凉拌菠菜",
@@ -663,7 +681,8 @@
       "slots": [
         1,
         2
-      ]
+      ],
+      "tier": "yellow"
     },
     "teriyaki_tofu": {
       "name": "日式照烧豆腐 + 二米饭",
@@ -699,7 +718,8 @@
       "tips": "豆腐先煎后烧才入味；代糖代替白糖，照烧风味不变热量更低。",
       "slots": [
         2
-      ]
+      ],
+      "tier": "yellow"
     }
   },
   "plans": [
