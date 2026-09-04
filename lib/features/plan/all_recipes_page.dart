@@ -122,100 +122,41 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
                         textAlign: TextAlign.center),
                   );
                 }
-                return ListView.builder(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                  itemCount: list.length,
-                  itemBuilder: (_, i) {
-                    final r = list[i];
-                    final isBanned = bannedIds.contains(r.id);
-                    final slotText = r.slots
-                        .map((s) => kSlotShort[s])
-                        .whereType<String>()
-                        .join(' / ');
-                    return Dismissible(
-                      key: ValueKey(r.id),
-                      direction: DismissDirection.horizontal,
-                      background: _swipeBg(
-                        scheme,
-                        alignLeft: false,
-                        icon: Icons.block,
-                        label: '不吃',
-                        color: scheme.errorContainer,
-                        fg: scheme.error,
-                      ),
-                      secondaryBackground: _swipeBg(
-                        scheme,
-                        alignLeft: true,
-                        icon: Icons.block,
-                        label: '不吃',
-                        color: scheme.errorContainer,
-                        fg: scheme.error,
-                      ),
-                      confirmDismiss: (_) async {
-                        // 不真正移除卡片：就地切换禁用状态并刷新
-                        final nowBanned = await repo.toggleBanned(r.id);
-                        setState(() {});
-                        if (mounted) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(nowBanned
-                                  ? '「${r.name}」已禁用，周食谱不再推荐'
-                                  : '「${r.name}」已恢复推荐'),
-                              duration: const Duration(seconds: 2),
-                            ),
-                          );
-                        }
-                        return false;
-                      },
-                      child: Card(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        color: isBanned ? scheme.surfaceContainerHighest : null,
-                        child: ListTile(
-                          leading: Opacity(
-                            opacity: isBanned ? 0.4 : 1,
-                            child: RecipeThumb(recipe: r),
-                          ),
-                          title: Text(
-                            isBanned ? '${r.name}（已禁用）' : r.name,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              decoration:
-                                  isBanned ? TextDecoration.lineThrough : null,
-                              color: isBanned
-                                  ? scheme.onSurfaceVariant
-                                  : null,
-                            ),
-                          ),
-                          subtitle: Text(
-                            isBanned ? '左滑恢复 · $slotText' : '$slotText · ${r.kcal} kcal',
+                // 标题后跟当前筛选下的数量，如「全部食谱 · 134」
+                final countText = switch (_filter) {
+                  _bannedFilter => '已禁用 · ${list.length}',
+                  -1 => '全部 · ${list.length}',
+                  _ => '${kSlotShort[_filter]} · ${list.length}',
+                };
+                return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 4, 20, 4),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(countText,
                             style: TextStyle(
                                 fontSize: 12,
-                                color: scheme.onSurfaceVariant),
-                          ),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              IconButton(
-                                icon: Icon(
-                                  Icons.edit_note,
-                                  size: 20,
-                                  color: isBanned
-                                      ? scheme.onSurfaceVariant
-                                      : scheme.primary,
-                                ),
-                                tooltip: '记入今日日记',
-                                onPressed: () =>
-                                    logRecipeToDiary(context, ref, r),
-                              ),
-                              const Icon(Icons.chevron_right, size: 20),
-                            ],
-                          ),
-                          onTap: () => openRecipeSheet(context, r),
-                        ),
+                                color: scheme.onSurfaceVariant)),
                       ),
-                    );
-                  },
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+                        itemCount: list.length,
+                        itemBuilder: (_, i) {
+                          final r = list[i];
+                          final isBanned = bannedIds.contains(r.id);
+                          final slotText = r.slots
+                              .map((s) => kSlotShort[s])
+                              .whereType<String>()
+                              .join(' / ');
+                          return _recipeCard(context, ref, repo, r, isBanned,
+                              slotText, scheme);
+                        },
+                      ),
+                    ),
+                  ],
                 );
               },
             ),
@@ -254,6 +195,93 @@ class _AllRecipesPageState extends ConsumerState<AllRecipesPage> {
       ),
       alignment: Alignment.center,
       child: content,
+    );
+  }
+
+  /// 单个菜谱卡片：左滑禁用/恢复
+  Widget _recipeCard(
+      BuildContext context,
+      WidgetRef ref,
+      WeeklyPlanRepo repo,
+      Recipe r,
+      bool isBanned,
+      String slotText,
+      ColorScheme scheme) {
+    return Dismissible(
+      key: ValueKey(r.id),
+      direction: DismissDirection.horizontal,
+      background: _swipeBg(
+        scheme,
+        alignLeft: false,
+        icon: Icons.block,
+        label: '不吃',
+        color: scheme.errorContainer,
+        fg: scheme.error,
+      ),
+      secondaryBackground: _swipeBg(
+        scheme,
+        alignLeft: true,
+        icon: Icons.block,
+        label: '不吃',
+        color: scheme.errorContainer,
+        fg: scheme.error,
+      ),
+      confirmDismiss: (_) async {
+        // 不真正移除卡片：就地切换禁用状态并刷新
+        final nowBanned = await repo.toggleBanned(r.id);
+        setState(() {});
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(nowBanned
+                  ? '「${r.name}」已禁用，周食谱不再推荐'
+                  : '「${r.name}」已恢复推荐'),
+              duration: const Duration(seconds: 2),
+            ),
+          );
+        }
+        return false;
+      },
+      child: Card(
+        margin: const EdgeInsets.only(bottom: 8),
+        color: isBanned ? scheme.surfaceContainerHighest : null,
+        child: ListTile(
+          leading: Opacity(
+            opacity: isBanned ? 0.4 : 1,
+            child: RecipeThumb(recipe: r),
+          ),
+          title: Text(
+            isBanned ? '${r.name}（已禁用）' : r.name,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              decoration: isBanned ? TextDecoration.lineThrough : null,
+              color: isBanned ? scheme.onSurfaceVariant : null,
+            ),
+          ),
+          subtitle: Text(
+            isBanned ? '左滑恢复 · $slotText' : '$slotText · ${r.kcal} kcal',
+            style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
+          ),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.edit_note,
+                  size: 20,
+                  color:
+                      isBanned ? scheme.onSurfaceVariant : scheme.primary,
+                ),
+                tooltip: '记入今日日记',
+                onPressed: () => logRecipeToDiary(context, ref, r),
+              ),
+              const Icon(Icons.chevron_right, size: 20),
+            ],
+          ),
+          onTap: () => openRecipeSheet(context, r),
+        ),
+      ),
     );
   }
 }
